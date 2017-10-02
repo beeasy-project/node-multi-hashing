@@ -85,7 +85,7 @@ le32enc(void *pp, uint32_t x)
  * (unsigned char) in big-endian form.  Assumes len is a multiple of 4.
  */
 static void
-be32enc_vect(unsigned char *dst, const uint32_t *src, uint32_t len)
+be32enc_vect(unsigned char *dst, const uint32_t *src, size_t len)
 {
 	size_t i;
 
@@ -98,7 +98,7 @@ be32enc_vect(unsigned char *dst, const uint32_t *src, uint32_t len)
  * len/4 vector of (uint32_t).  Assumes len is a multiple of 4.
  */
 static void
-be32dec_vect(uint32_t *dst, const unsigned char *src, uint32_t len)
+be32dec_vect(uint32_t *dst, const unsigned char *src, size_t len)
 {
 	size_t i;
 
@@ -106,7 +106,7 @@ be32dec_vect(uint32_t *dst, const unsigned char *src, uint32_t len)
 		dst[i] = be32dec(src + i * 4);
 }
 
-void quark_hash(const char* input, char* output, uint32_t len)
+void quark_hash(const char* input, char* output)
 {
     sph_blake512_context     ctx_blake;
     sph_bmw512_context       ctx_bmw;
@@ -114,6 +114,7 @@ void quark_hash(const char* input, char* output, uint32_t len)
     sph_jh512_context        ctx_jh;
     sph_keccak512_context    ctx_keccak;
     sph_skein512_context     ctx_skein;
+    static unsigned char pblank[1];
 
     uint32_t mask = 8;
     uint32_t zero = 0;
@@ -123,7 +124,7 @@ void quark_hash(const char* input, char* output, uint32_t len)
 
 
     sph_blake512_init(&ctx_blake);
-    sph_blake512 (&ctx_blake, input, len);
+    sph_blake512 (&ctx_blake, input, 80);
     sph_blake512_close (&ctx_blake, hashA);	 //0
 
 

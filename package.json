@@ -1,31 +1,94 @@
 {
-    "name": "multi-hashing",
-    "version": "0.0.9",
-    "main": "multihashing",
-    "author": {
-        "name": "Matthew Little",
-        "email": "zone117x@gmail.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/zone117x/node-multi-hashing.git"
-    },
-    "dependencies" : {
-        "bindings" : "*"
-    },
-    "keywords": [
-        "scrypt",
-        "scryptjane",
-        "script-n",
-        "x11",
-        "quark",
-        "keccak_hash",
-        "skein",
-        "bcrypt",
-        "keccak",
-        "blake",
-        "shavite",
-        "fugue",
-        "sha1"
+  "_args": [
+    [
+      {
+        "raw": "multi-hashing@*",
+        "scope": null,
+        "escapedName": "multi-hashing",
+        "name": "multi-hashing",
+        "rawSpec": "*",
+        "spec": "*",
+        "type": "range"
+      },
+      "/home/mike/Programs/nomp/node_modules/stratum-pool"
     ]
+  ],
+  "_from": "multi-hashing@*",
+  "_id": "multi-hashing@0.0.4",
+  "_inCache": true,
+  "_location": "/multi-hashing",
+  "_npmUser": {
+    "name": "zone117x",
+    "email": "zone117x@gmail.com"
+  },
+  "_npmVersion": "1.4.4",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "multi-hashing@*",
+    "scope": null,
+    "escapedName": "multi-hashing",
+    "name": "multi-hashing",
+    "rawSpec": "*",
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/stratum-pool"
+  ],
+  "_resolved": "https://registry.npmjs.org/multi-hashing/-/multi-hashing-0.0.4.tgz",
+  "_shasum": "4cf12dd281b7ca71ebe1966861f84fefa36c2cee",
+  "_shrinkwrap": null,
+  "_spec": "multi-hashing@*",
+  "_where": "/home/mike/Programs/nomp/node_modules/stratum-pool",
+  "author": {
+    "name": "Matthew Little",
+    "email": "zone117x@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/zone117x/node-multi-hashing/issues"
+  },
+  "dependencies": {
+    "bindings": "*"
+  },
+  "description": "node-multi-hashing\r ===============",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "4cf12dd281b7ca71ebe1966861f84fefa36c2cee",
+    "tarball": "https://registry.npmjs.org/multi-hashing/-/multi-hashing-0.0.4.tgz"
+  },
+  "gypfile": true,
+  "homepage": "https://github.com/zone117x/node-multi-hashing",
+  "keywords": [
+    "scrypt",
+    "scryptjane",
+    "script-n",
+    "x11",
+    "quark",
+    "keccak_hash",
+    "skein",
+    "bcrypt",
+    "keccak",
+    "blake",
+    "shavite",
+    "fugue"
+  ],
+  "main": "multihashing",
+  "maintainers": [
+    {
+      "name": "zone117x",
+      "email": "zone117x@gmail.com"
+    }
+  ],
+  "name": "multi-hashing",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zone117x/node-multi-hashing.git"
+  },
+  "scripts": {
+    "install": "node-gyp rebuild"
+  },
+  "version": "0.0.4"
 }
